@@ -5,9 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>종합몰 가격 계산기</title>
     <link rel="stylesheet" href="/index.css">
-    <script src="/index.js"></script>
+    <script src="/index.js" defer></script>
 </head>
 <body>
-    
+
+    <div class="calculator">
+
+        <div class="row header">
+            <div>구분</div>
+            <div>마크업</div>
+            <div>코스트</div>
+            <div>유럽</div>
+            <div>비유럽</div>
+        </div>
+
+        <div class="row">
+            <div>의류</div>
+            <div><input type="number" class="markup" step="0.01" value="1.00"></div>
+            <div><input type="number" class="cost"></div>
+            <div class="eu">₩0</div>
+            <div class="non-eu">₩0</div>
+        </div>
+
+        <div class="row">
+            <div>신발</div>
+            <div><input type="number" class="markup" step="0.01" value="1.00"></div>
+            <div><input type="number" class="cost"></div>
+            <div class="eu">₩0</div>
+            <div class="non-eu">₩0</div>
+        </div>
+
+        <div class="row">
+            <div>가방/악세</div>
+            <div><input type="number" class="markup" step="0.01" value="1.00"></div>
+            <div><input type="number" class="cost"></div>
+            <div class="eu">₩0</div>
+            <div class="non-eu">₩0</div>
+        </div>
+
+        <div class="row">
+            <div>특수상품</div>
+            <div><input type="number" class="markup" step="0.01" value="1.00"></div>
+            <div><input type="number" class="cost"></div>
+            <div class="eu">₩0</div>
+            <div class="non-eu">₩0</div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
