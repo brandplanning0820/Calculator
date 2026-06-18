@@ -1,5 +1,5 @@
 /* =========================
-   일반 계산기
+    일반 계산기
 ========================= */
 
 const EU_RATE = 2150;
@@ -81,6 +81,14 @@ function calculateLuxury(){
         document.getElementById('luxuryCost').value
     );
 
+    /* 기준금액 */
+    const basePrice =
+        cost * markup * 1800;
+
+    document.querySelector('.luxury-base')
+        .textContent =
+        '₩' + Math.round(basePrice).toLocaleString();
+
     if(!cost || !markup){
 
         document.querySelector('.luxury-eu')
@@ -106,7 +114,9 @@ function calculateLuxury(){
         euBase * 0.05;
 
     const euAdditional =
-        (euBase + euTax - 2000000) * 0.2;
+        euBase > 2000000
+        ? (euBase + euTax - 2000000) * 0.2
+        : 0;
 
     const euMisc =
         euAdditional * 0.3 + 50000;
@@ -137,7 +147,9 @@ function calculateLuxury(){
         nonEuBase * 0.05;
 
     const nonEuAdditional =
-        (nonEuBase + nonEuTax - 2000000) * 0.2;
+        nonEuBase > 2000000
+        ? (nonEuBase + nonEuTax - 2000000) * 0.2
+        : 0;
 
     const nonEuMisc =
         nonEuAdditional * 0.3 + 50000;
