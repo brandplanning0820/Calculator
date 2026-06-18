@@ -3,11 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>종합몰 가격 계산기</title>
+
     <link rel="stylesheet" href="index.css">
     <script src="index.js" defer></script>
 </head>
 <body>
+
+    <!-- 200만원 이상 가방 계산 -->
+
+    <div class="luxury-calculator">
+
+        <h2>200만원 이상 가방 계산</h2>
+
+        <div class="luxury-header">
+            <div>마크업</div>
+            <div>코스트</div>
+            <div>유럽</div>
+            <div>비유럽</div>
+        </div>
+
+        <div class="luxury-row">
+
+            <input
+                type="number"
+                id="luxuryMarkup"
+                step="0.01"
+                value="1.00"
+            >
+
+            <input
+                type="number"
+                id="luxuryCost"
+                placeholder="코스트"
+            >
+
+            <div class="luxury-eu">₩0</div>
+
+            <div class="luxury-non-eu">₩0</div>
+
+        </div>
+
+    </div>
+
+    <!-- 일반 계산기 -->
 
     <div class="calculator">
 
@@ -21,33 +61,97 @@
 
         <div class="row">
             <div>의류</div>
-            <div><input type="number" class="markup" step="0.01" value="1.00"></div>
-            <div><input type="number" class="cost"></div>
+
+            <div>
+                <input
+                    type="number"
+                    class="markup"
+                    step="0.01"
+                    value="1.00"
+                >
+            </div>
+
+            <div>
+                <input
+                    type="number"
+                    class="cost"
+                >
+            </div>
+
             <div class="eu">₩0</div>
+
             <div class="non-eu">₩0</div>
         </div>
 
         <div class="row">
             <div>신발</div>
-            <div><input type="number" class="markup" step="0.01" value="1.00"></div>
-            <div><input type="number" class="cost"></div>
+
+            <div>
+                <input
+                    type="number"
+                    class="markup"
+                    step="0.01"
+                    value="1.00"
+                >
+            </div>
+
+            <div>
+                <input
+                    type="number"
+                    class="cost"
+                >
+            </div>
+
             <div class="eu">₩0</div>
+
             <div class="non-eu">₩0</div>
         </div>
 
         <div class="row">
             <div>가방/악세</div>
-            <div><input type="number" class="markup" step="0.01" value="1.00"></div>
-            <div><input type="number" class="cost"></div>
+
+            <div>
+                <input
+                    type="number"
+                    class="markup"
+                    step="0.01"
+                    value="1.00"
+                >
+            </div>
+
+            <div>
+                <input
+                    type="number"
+                    class="cost"
+                >
+            </div>
+
             <div class="eu">₩0</div>
+
             <div class="non-eu">₩0</div>
         </div>
 
         <div class="row">
             <div>특수상품</div>
-            <div><input type="number" class="markup" step="0.01" value="1.00"></div>
-            <div><input type="number" class="cost"></div>
+
+            <div>
+                <input
+                    type="number"
+                    class="markup"
+                    step="0.01"
+                    value="1.00"
+                >
+            </div>
+
+            <div>
+                <input
+                    type="number"
+                    class="cost"
+                >
+            </div>
+
             <div class="eu">₩0</div>
+
             <div class="non-eu">₩0</div>
         </div>
 

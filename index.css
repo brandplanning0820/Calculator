@@ -11,28 +11,119 @@ body{
     min-height:100vh;
 
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
 
-    padding:20px;
+    padding:40px 20px;
 }
 
-.calculator{
+/* =========================
+    200만원 이상 가방 계산
+========================= */
+
+.luxury-calculator{
+    width:100%;
     max-width:1200px;
-    margin:0 auto;
+
+    background:#f5f5f5;
+
+    padding:30px;
+    border-radius:20px;
+
+    margin-bottom:40px;
+}
+
+.luxury-calculator h2{
+    text-align:center;
+    margin-bottom:25px;
+    font-weight:900;
+    font-size:24px;
+}
+
+.luxury-header,
+.luxury-row{
+    display:grid;
+
+    grid-template-columns:
+    1fr
+    1fr
+    1.5fr
+    1.5fr;
+
+    gap:10px;
+    align-items:center;
+}
+
+.luxury-header{
+    font-weight:bold;
+    text-align:center;
+
+    margin-bottom:15px;
+
+    font-size:20px;
+}
+
+.luxury-row input{
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+    border-radius:10px;
+
+    font-size:18px;
+    text-align:center;
+}
+
+.luxury-eu,
+.luxury-non-eu{
+    background:#ffe600;
+    color:#000;
+
+    font-weight:700;
+
+    padding:14px;
+    border-radius:10px;
+
+    min-height:54px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:24px;
+}
+
+/* =========================
+    일반 계산기
+========================= */
+
+.calculator{
+    width:100%;
+    max-width:1200px;
 }
 
 .row{
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1.5fr 1.5fr;
+
+    grid-template-columns:
+    1fr
+    1fr
+    1fr
+    1.5fr
+    1.5fr;
+
     gap:10px;
     align-items:center;
+
     margin-bottom:10px;
 }
 
 .header{
     font-weight:bold;
-    font-size:18px;
+    font-size:20px;
+
     margin-bottom:15px;
 }
 
@@ -46,9 +137,12 @@ body{
 
 input{
     width:100%;
+
     padding:12px;
+
     border:1px solid #ddd;
     border-radius:8px;
+
     font-size:16px;
     text-align:center;
 }
@@ -57,29 +151,42 @@ input{
 .non-eu{
     background:#ffe600;
     color:#000;
+
     font-weight:700;
+
     padding:12px;
     border-radius:8px;
+
     min-height:46px;
+
     display:flex;
     align-items:center;
     justify-content:center;
 }
 
+/* =========================
+    모바일
+========================= */
+
 @media (max-width:768px){
 
-    .row{
-        grid-template-columns: 1fr;
-    }
-
+    .luxury-header,
     .header{
         display:none;
     }
 
+    .luxury-row,
+    .row{
+        grid-template-columns:1fr;
+    }
+
+    .luxury-row,
     .row{
         background:#fff;
+
         padding:15px;
         border-radius:12px;
+
         margin-bottom:15px;
     }
 }
