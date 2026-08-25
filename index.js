@@ -4,7 +4,7 @@
 
 const EU_RATE = 2150;
 const NON_EU_RATE = 2350;
-const FEE_RATE = 0.84;
+const FEE_RATE = 0.86;
 
 const inputs = document.querySelectorAll(
     '.markup, .cost'
@@ -83,7 +83,7 @@ function calculateLuxury(){
 
     /* 기준금액 */
     const basePrice =
-        cost * markup * 1800;
+        cost * markup * 1850;
 
     document.querySelector('.luxury-base')
         .textContent =
@@ -103,7 +103,7 @@ function calculateLuxury(){
     /* 유럽 */
 
     const euBase =
-        cost * markup * 1800;
+        cost * markup * 1850;
 
     const euTax = 0;
 
@@ -130,12 +130,12 @@ function calculateLuxury(){
         euMisc;
 
     const euFinalSell =
-        euFinalBuy / 0.84;
+        euFinalBuy / 0.86;
 
     /* 비유럽 */
 
     const nonEuBase =
-        cost * markup * 1800;
+        cost * markup * 1850;
 
     const nonEuTax =
         nonEuBase * 0.08;
@@ -163,7 +163,7 @@ function calculateLuxury(){
         nonEuMisc;
 
     const nonEuFinalSell =
-        nonEuFinalBuy / 0.84;
+        nonEuFinalBuy / 0.86;
 
     document.querySelector('.luxury-eu')
         .textContent =
